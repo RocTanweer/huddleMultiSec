@@ -1,0 +1,32 @@
+// colors
+$pink : hsl(322, 100%, 66%);
+$paleCyan : hsl(193, 100%, 96%);
+$darkCyan : hsl(192, 100%, 9%);
+$greyBlue : hsl(208, 11%, 55%);
+
+
+// fonts
+$fontSize : 1.125rem;
+$headingFont : 'Poppins', sans-serif;
+$bodyButtonFont : 'Open Sans', sans-serif;
+
+
+// responsiveness
+
+$breakPoints : (
+    'extraSmall' : 20rem,
+    'small'  : 23.4375rem,
+    'large' : 45.5rem,
+    'tab' : 64rem,
+);
+
+
+@mixin responsive($size) {
+    $breakPoint : map-get($breakPoints, $size);
+
+    @media screen and (max-width: $breakPoint){
+        @content
+    }
+};
+
+

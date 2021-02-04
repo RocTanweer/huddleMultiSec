@@ -1,0 +1,73 @@
+html{
+    font-size: 100%;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: $bodyButtonFont;
+}
+
+
+h1, h2, h3{
+    font-family: $headingFont;
+    color: $darkCyan;
+    font-weight: 600;
+}
+
+h1{
+    font-size: 2.8125rem;
+}
+
+h2{
+    font-size: 1.875rem;
+    margin-bottom: 1.65rem;
+
+    @include responsive(small){
+        font-size: 1.375rem;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.btn{
+    padding: 1.125rem 4rem;
+    font-weight: 700;
+    border-radius: 2.75rem;
+}
+
+// utility classes
+
+.section-margin{
+    margin-bottom: 10.25rem;
+    @include responsive(small){
+        margin-bottom: 3.68rem;
+    }
+}
+
+.f-block-h{
+    height: 27.75rem;
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    box-shadow: 3px 5px 8px 0px rgba(0, 0, 0, 0.2);
+    transition: all 150ms ease-in-out;
+}
+
+

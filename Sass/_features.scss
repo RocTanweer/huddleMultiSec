@@ -1,0 +1,89 @@
+.feature{
+   padding: 0 6.45rem; 
+
+   @include responsive(large){
+       padding: 0 1.47rem;
+   }
+
+   @include responsive(small){
+       padding: 0 1.125rem;
+   }
+
+    &__block{
+        padding-left: 7.5rem;
+        padding-right: 2.375rem;
+        justify-content: space-between;
+        border: 4px solid rgba(0, 0, 0, 0.048);
+        border-radius: 20px;
+
+        @include responsive(tab){
+            padding-top: 3.65rem;
+            padding-left: 5.43rem;
+            padding-right: 5.43rem;
+            padding-bottom: 6rem;
+            padding: 3.65rem 5.43rem 6rem 5.43rem;
+            height: 44.75rem;
+        }
+
+        @include responsive(small){
+            height: 30.75rem;
+            padding-left: 1.8rem;
+            padding-right: 1.8rem;
+            padding-top: 0;
+            padding-bottom: 0;
+            justify-content: space-around;
+        }
+
+        @include responsive(extraSmall){
+            height: 25.75rem;
+        }
+        
+
+        &:not(:last-child){
+            margin-bottom: 2.2rem;
+        }
+
+    
+        .f-block-text{
+            max-width: 31.25rem;
+            @include responsive(tab){
+                text-align: center;
+            }
+
+            .f-description{
+                font-size: 1.25rem;
+                color: $greyBlue;
+
+                @include responsive(small){
+                    font-size: 0.9375rem;
+                }
+            }
+        }
+
+        .f-block-img{
+            max-width: 25.68rem;
+            img{
+                width: 100%;
+            }
+        }   
+    }
+    
+}
+
+.f-first{
+    @include responsive(tab){
+        flex-flow: column-reverse wrap;
+    }
+}
+
+.f-second{
+    @include responsive(tab){
+        flex-flow: column wrap;
+    }
+}
+
+.f-third{
+    @include responsive(tab){
+        flex-flow: column-reverse wrap;
+    }
+}
